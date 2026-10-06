@@ -1,26 +1,170 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
+<html class="document" lang="ru">
+  <head class="document-head">
+    <meta class="meta-charset" charset="UTF-8" />
+    <meta class="meta-viewport" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="document-title">Мята — выбор даты и времени</title>
+    <link class="styles-link" rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <!--
-      ЗАДАНИЕ
-      ========
-      Сверстать страницу выбора даты и времени по своему макету.
 
-      Пока это только вёрстка. Никакого JavaScript — ни кликов,
-      ни переходов, ни выбора дня. Всё статично.
+  <body class="page-body">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Студия красоты Мята">
+          <span class="brand-mark">М</span>
+          <span class="brand-copy">
+            <span class="brand-name">Мята</span>
+            <span class="brand-subtitle">студия красоты</span>
+          </span>
+        </a>
 
-      Стили пишите в styles.css. Разметку — здесь.
-    -->
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a class="site-nav-link" href="#">Услуги</a>
+          <a class="site-nav-link" href="#">Мастера</a>
+          <a class="site-nav-link" href="#">Отзывы</a>
+          <span class="site-address">ул. Лесная, 12</span>
+        </nav>
 
-    <div class="page">
-      <!-- Начните отсюда. Разметьте шапку, основную область
-           с календарём и слотами, подвал. -->
+        <button class="header-action" type="button">Записаться</button>
+      </header>
+
+      <main class="booking-main">
+        <section class="progress-section" aria-label="Прогресс записи">
+          <div class="progress-topline">
+            <h2 class="progress-title">Дата и время</h2>
+            <span class="progress-counter">Шаг 4 из 6</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span class="progress-value"></span>
+          </div>
+        </section>
+
+        <section class="booking-content">
+          <header class="content-header">
+            <span class="content-eyebrow">Шаг 4</span>
+            <h1 class="content-title">Дата и время</h1>
+            <p class="content-description">Выберите день, затем свободный слот.</p>
+          </header>
+
+          <div class="booking-panels">
+            <section class="calendar-card" aria-labelledby="calendar-title">
+              <header class="calendar-header">
+                <button class="calendar-arrow" type="button" aria-label="Предыдущий месяц">←</button>
+                <h2 class="calendar-title" id="calendar-title">Октябрь 2026</h2>
+                <button class="calendar-arrow" type="button" aria-label="Следующий месяц">→</button>
+              </header>
+
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span class="weekday">Пн</span>
+                <span class="weekday">Вт</span>
+                <span class="weekday">Ср</span>
+                <span class="weekday">Чт</span>
+                <span class="weekday">Пт</span>
+                <span class="weekday weekend">Сб</span>
+                <span class="weekday weekend">Вс</span>
+              </div>
+
+              <div class="calendar-grid" aria-label="Календарь на октябрь 2026">
+                <button class="calendar-day other-month" type="button">28</button>
+                <button class="calendar-day other-month" type="button">29</button>
+                <button class="calendar-day other-month" type="button">30</button>
+                <button class="calendar-day" type="button">1</button>
+                <button class="calendar-day selected" type="button" aria-current="date">2</button>
+                <button class="calendar-day weekend" type="button">3</button>
+                <button class="calendar-day weekend" type="button">4</button>
+
+                <button class="calendar-day" type="button">5</button>
+                <button class="calendar-day" type="button">6</button>
+                <button class="calendar-day" type="button">7</button>
+                <button class="calendar-day" type="button">8</button>
+                <button class="calendar-day" type="button">9</button>
+                <button class="calendar-day weekend" type="button">10</button>
+                <button class="calendar-day weekend" type="button">11</button>
+
+                <button class="calendar-day" type="button">12</button>
+                <button class="calendar-day" type="button">13</button>
+                <button class="calendar-day" type="button">14</button>
+                <button class="calendar-day" type="button">15</button>
+                <button class="calendar-day" type="button">16</button>
+                <button class="calendar-day weekend" type="button">17</button>
+                <button class="calendar-day weekend" type="button">18</button>
+
+                <button class="calendar-day" type="button">19</button>
+                <button class="calendar-day" type="button">20</button>
+                <button class="calendar-day" type="button">21</button>
+                <button class="calendar-day" type="button">22</button>
+                <button class="calendar-day" type="button">23</button>
+                <button class="calendar-day weekend" type="button">24</button>
+                <button class="calendar-day weekend" type="button">25</button>
+
+                <button class="calendar-day" type="button">26</button>
+                <button class="calendar-day" type="button">27</button>
+                <button class="calendar-day" type="button">28</button>
+                <button class="calendar-day" type="button">29</button>
+                <button class="calendar-day" type="button">30</button>
+                <button class="calendar-day weekend" type="button">31</button>
+                <button class="calendar-day other-month weekend" type="button">1</button>
+              </div>
+            </section>
+
+            <aside class="time-card" aria-labelledby="time-title">
+              <header class="time-header">
+                <h2 class="time-title" id="time-title">Свободное время</h2>
+                <p class="time-date">2 октября · пятница</p>
+              </header>
+
+              <div class="time-grid">
+                <button class="time-slot" type="button">10:00</button>
+                <button class="time-slot" type="button">11:30</button>
+                <button class="time-slot unavailable" type="button" disabled>12:15</button>
+                <button class="time-slot" type="button">13:00</button>
+                <button class="time-slot selected" type="button" aria-pressed="true">14:30</button>
+                <button class="time-slot" type="button">16:00</button>
+                <button class="time-slot" type="button">17:30</button>
+                <button class="time-slot unavailable" type="button" disabled>18:30</button>
+                <button class="time-slot" type="button">19:00</button>
+              </div>
+
+              <div class="slot-legend">
+                <span class="legend-item">
+                  <span class="legend-dot free"></span>
+                  Свободно
+                </span>
+                <span class="legend-item">
+                  <span class="legend-dot busy"></span>
+                  Занято
+                </span>
+              </div>
+
+              <p class="time-note">Время бронируется на 10 минут после перехода к контактам.</p>
+            </aside>
+          </div>
+
+          <div class="booking-actions">
+            <button class="button button-secondary" type="button">Назад</button>
+            <div class="selection-summary">
+              <span class="selection-label">Выбрано</span>
+              <strong class="selection-value">2 октября · 14:30</strong>
+            </div>
+            <button class="button button-primary" type="button">Далее</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <section class="footer-brand-block">
+          <span class="footer-brand">Мята</span>
+          <p class="footer-description">Спокойная студия красоты в центре города. Ежедневно 09:00–21:00.</p>
+        </section>
+        <section class="footer-contact-block">
+          <span class="footer-heading">Контакты</span>
+          <p class="footer-contact">+7 999 555-24-24<br />ул. Лесная, 12</p>
+        </section>
+        <section class="footer-booking-block">
+          <span class="footer-heading">Запись</span>
+          <p class="footer-contact">Выберите мастера, услугу и удобное время онлайн.</p>
+        </section>
+      </footer>
     </div>
   </body>
 </html>
